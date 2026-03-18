@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Yandex.Disk API Автотесты
 
 Автоматизированные тесты для API Яндекс.Диска на Python + Pytest + Requests.
