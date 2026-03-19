@@ -1,6 +1,8 @@
 # Yandex.Disk API Автотесты
 
-Автоматизированные тесты для API Яндекс.Диска на Python + Pytest + Requests.
+Автоматизированные тесты для API Яндекс.Диска на Python с использованием Pytest и Requests.
+
+---
 
 ## Установка
 
@@ -17,19 +19,27 @@ venv\Scripts\activate
 
 # Установить зависимости
 pip install -r requirements.txt
-=======
-# yandex.tech
->>>>>>> 7a3beba77088d4b23a25468c4ef286bdb1b4c7d1
+```
+
+---
+
+## Настройка
+
+```bash
+# Скопировать файл окружения
+cp .env.example .env
+```
+
+После этого откройте `.env` и добавьте ваш токен Яндекс.Диска.
+
+---
 
 ## Запуск тестов
 
 ```bash
-
-# Настройка (скопируйте .env.example в .env и вставьте токен)
-cp .env.example .env
-
 # Запуск всех тестов
 pytest -v
 
-# Запуск с отчётом
+# Запуск с HTML-отчетом
 pytest -v --html=report.html --self-contained-html
+```
