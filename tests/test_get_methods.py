@@ -25,7 +25,7 @@ class TestGetMethods:
         assert upload_url is not None
         assert upload_url.startswith("https://")
 
-    def test_get_download_url_nonexistent(self, api_client, test_base_folder, random_filename):
+    def test_get_nonexistent_download_url(self, api_client, test_base_folder, random_filename):
         path = f"{test_base_folder}/nonexistent_{random_filename}"
         with pytest.raises(Exception):
             api_client.get_download_url(path=path)

@@ -75,3 +75,29 @@ class YandexDiskClient:
         response = requests.put(upload_url, data=file_content)
         response.raise_for_status()
         return response
+
+    def publish_resource(self, path: str):
+        """PUT /resources/publish - опубликовать ресурс"""
+        response = self.session.put(
+            f"{self.base_url}/resources/publish",
+            params={"path": path}
+        )
+        return response
+
+    def unpublish_resource(self, path: str):
+        """PUT /resources/unpublish - отменить публикацию ресурса"""
+        response = self.session.put(
+            f"{self.base_url}/resources/unpublish",
+            params={"path": path}
+        )
+        return response
+
+    def get_public_url(self, path: str) -> str:
+        """GET /resources - получить публичную ссылку на ресурс"""
+        response = self.session.get(
+            f"{self.base_url}/resources",
+            params={"path": path}
+        )
+        response.raise_for_status()
+        data = response.json()
+        return data.get("public_url", data.get("public_key", ""))

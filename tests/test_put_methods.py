@@ -26,3 +26,4 @@ class TestPutMethods:
         path = f"{test_base_folder}/"
         response = api_client.create_folder(path=path)
         assert response.status_code in [400, 404, 409]
+
