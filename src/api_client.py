@@ -77,7 +77,7 @@ class YandexDiskClient:
         return response
 
     def publish_resource(self, path: str):
-        """PUT /resources/publish - опубликовать ресурс"""
+        # опубликовать ресурс
         response = self.session.put(
             f"{self.base_url}/resources/publish",
             params={"path": path}
@@ -85,7 +85,7 @@ class YandexDiskClient:
         return response
 
     def unpublish_resource(self, path: str):
-        """PUT /resources/unpublish - отменить публикацию ресурса"""
+        # отменить публикацию ресурса
         response = self.session.put(
             f"{self.base_url}/resources/unpublish",
             params={"path": path}
@@ -93,7 +93,7 @@ class YandexDiskClient:
         return response
 
     def get_public_url(self, path: str) -> str:
-        """GET /resources - получить публичную ссылку на ресурс"""
+        # получить публичную ссылку на ресурс
         response = self.session.get(
             f"{self.base_url}/resources",
             params={"path": path}
