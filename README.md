@@ -20,3 +20,16 @@ pip install -r requirements.txt
 =======
 # yandex.tech
 >>>>>>> 7a3beba77088d4b23a25468c4ef286bdb1b4c7d1
+
+## Запуск тестов
+
+```bash
+
+# Настройка (скопируйте .env.example в .env и вставьте токен)
+cp .env.example .env
+
+# Запуск всех тестов
+pytest -v
+
+# Запуск с отчётом
+pytest -v --html=report.html --self-contained-html
