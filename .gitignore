@@ -16,7 +16,7 @@ htmlcov/
 .coverage
 coverage.xml
 
-report.html
+*.html
 
 .vscode/
 .idea/
