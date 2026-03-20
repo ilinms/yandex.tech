@@ -60,7 +60,6 @@ pytest -v --html=report.html --self-contained-html
 
 **Важно**
 
-### Публикация ресурсов
 Тесты `test_publish_file` и `test_publish_and_access_public_resource` 
 завершаются с ошибкой при проверке скачивания по публичной ссылке.
 
